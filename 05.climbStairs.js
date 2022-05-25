@@ -3,9 +3,15 @@
  * @return {number}
  */
 var climbStairs = function (n) {
-  const first = 0;
-  const second = 1;
-  for (let i = 0; i < n; i++) {}
+  let first = 0;
+  let second = 1;
+  let ans;
+  for (let i = 0; i < n; i++) {
+    ans = first + second;
+    first = second;
+    second = ans;
+  }
+  return ans;
 };
 
 climbStairs(2);
