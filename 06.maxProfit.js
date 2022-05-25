@@ -3,17 +3,21 @@
  * @return {number}
  */
 var maxProfit = function (prices) {
-  let ans = 0;
-  for (let i = prices.length - 1; i >= 0; i--) {
-    for (let j = i - 1; j >= 0; j--) {
-      let profit = prices[i] - prices[j];
-      if (profit > ans) {
-        ans = profit;
-      }
+    let profit = 0
+    let temp
+    let min = Infinity
+    for (let i = 0; i < prices.length; i++) {
+        if (prices[i] < min) {
+            min = prices[i]
+        } else {
+            temp = Math.abs(prices[i] - min)
+        }
+        if (temp > profit) {
+            profit = temp
+        }
     }
-  }
-  console.log(ans);
-  return ans;
-};
+    return profit
+}
 
-maxProfit([7, 6, 4, 3, 1]);
+maxProfit([7, 1, 5, 3, 6, 4])
+maxProfit([7, 6, 4, 3, 1])
