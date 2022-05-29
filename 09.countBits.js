@@ -36,7 +36,17 @@
 //     return ans
 // }
 
-var countBits = function (n) {};
+var countBits = function (n) {
+    const ans = [0]
+    for (let i = 1; i <= n; i++) {
+        if (i % 2 !== 0) {
+            ans.push(ans[i - 1] + 1)
+        } else {
+            ans.push(ans[i / 2])
+        }
+    }
+    return ans
+}
 
 countBits(2);
 countBits(5);
