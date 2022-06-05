@@ -1,21 +1,9 @@
 /**
  * @param {number} n
- * @return {string[][]}
+ * @return {number}
  */
 
-const formatBoard = board => {
-    let result = []
-
-    for (let col = 0; col < board.length; col++) {
-        let newRow = new Array(board.length).fill(".")
-        newRow[board[col]] = "Q"
-        result.push(newRow.join(""))
-    }
-
-    return result
-}
-
-var solveNQueens = function (n) {
+var totalNQueens = function (n) {
     // global result
     const result = []
 
@@ -43,9 +31,8 @@ var solveNQueens = function (n) {
     }
 
     dfs(0, [])
-    return result.map(board => formatBoard(board))
+    return result.length
 }
 
-const ans1 =solveNQueens(4)
-const ans2 =solveNQueens(2)
-console.log(ans2)
+const ans = totalNQueens(4)
+console.log(ans)
