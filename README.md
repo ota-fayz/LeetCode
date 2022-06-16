@@ -1,4 +1,3 @@
-LEETCODE PATTERNS
+Algorithmic problems on Leetcode
 
-https://seanprashad.com/leetcode-patterns/ <br />
 https://leetcode.com/ota-fayz/
