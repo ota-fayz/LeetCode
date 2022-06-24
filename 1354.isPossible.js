@@ -2,6 +2,8 @@
  * @param {number[]} target
  * @return {boolean}
  */
+const { MaxPriorityQueue } = require("@datastructures-js/priority-queue");
+
 var isPossible = function (target) {
   let pq = new MaxPriorityQueue({ priority: (x) => x }),
     sum = 0;
@@ -15,4 +17,5 @@ var isPossible = function (target) {
   return true;
 };
 
-isPossible([9, 3, 5]);
+const ans = isPossible([9, 3, 5]);
+console.log(ans);
