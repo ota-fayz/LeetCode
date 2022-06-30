@@ -1,3 +1,3 @@
-Algorithmic problems on Leetcode
+Algorithmic problems on LeetCode
 
 https://leetcode.com/ota-fayz/
